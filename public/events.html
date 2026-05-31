@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <nav>
+      <div class="logo">EventBook</div>
+      <div class="nav-links">
+        <a href="/events.html">Events</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <button class="btn-logout" onclick="logout()">Logout</button>
+      </div>
+    </nav>
+
+    <section class="page-section">
+      <div class="page-header">
+        <div>
+          <h1>All <span class="highlight">Events</span></h1>
+          <p class="subtitle">Find and book your next experience</p>
+        </div>
+        <button class="btn" id="create-btn" onclick="showCreateForm()" style="display:none">
+          + Create Event
+        </button>
+      </div>
+
+      <!-- Create Event Form -->
+      <div class="form-overlay" id="form-overlay">
+        <div class="form-box">
+          <h2>Create New Event</h2>
+          <div class="form-group">
+            <label>Title</label>
+            <input type="text" id="event-title" placeholder="Event title..." />
+          </div>
+          <div class="form-group">
+            <label>Description</label>
+            <textarea id="event-description" rows="3" placeholder="Describe your event..."></textarea>
+          </div>
+          <div class="form-group">
+            <label>Location</label>
+            <input type="text" id="event-location" placeholder="Lagos, Nigeria" />
+          </div>
+          <div class="form-group">
+            <label>Date</label>
+            <input type="datetime-local" id="event-date" />
+          </div>
+          <div class="form-group">
+            <label>Capacity</label>
+            <input type="number" id="event-capacity" placeholder="Max attendees" min="1" />
+          </div>
+          <div class="form-actions">
+            <button class="btn" onclick="createEvent()">Create Event</button>
+            <button class="btn-cancel" onclick="hideCreateForm()">Cancel</button>
+          </div>
+          <p class="feedback" id="event-feedback"></p>
+        </div>
+      </div>
+
+      <!-- Events Grid -->
+      <div class="events-grid" id="events-grid"></div>
+
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

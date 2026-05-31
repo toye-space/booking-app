@@ -1,0 +1,403 @@
+/* === RESET & BASE === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* === AUTH PAGE === */
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #6c63ff;
+  margin-bottom: 8px;
+}
+
+.tagline {
+  color: #aaaaaa;
+  margin-bottom: 32px;
+  font-size: 1rem;
+}
+
+/* === TABS === */
+.tabs {
+  display: flex;
+  background-color: #111111;
+  border-radius: 10px;
+  padding: 4px;
+  margin-bottom: 24px;
+}
+
+.tab {
+  padding: 10px 32px;
+  background: none;
+  border: none;
+  color: #aaaaaa;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.tab.active {
+  background-color: #6c63ff;
+  color: #ffffff;
+}
+
+/* === FORM BOX === */
+.form-box {
+  background-color: #111111;
+  border: 1px solid #222222;
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 440px;
+}
+
+.form-box.hidden {
+  display: none;
+}
+
+.form-box h2 {
+  font-size: 1.4rem;
+  color: #6c63ff;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: #aaaaaa;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  background-color: #0a0a0a;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #6c63ff;
+}
+
+.form-group select option {
+  background-color: #111111;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* === BUTTONS === */
+.btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #6c63ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #574fd6;
+}
+
+.btn-cancel {
+  flex: 1;
+  background: none;
+  border: 1px solid #333;
+  color: #aaaaaa;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-cancel:hover {
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+}
+
+.btn-small {
+  padding: 8px 18px;
+  background-color: #6c63ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: auto;
+}
+
+.btn-small:hover {
+  background-color: #574fd6;
+}
+
+.btn-danger {
+  padding: 8px 18px;
+  background: none;
+  border: 1px solid #333;
+  color: #aaaaaa;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: auto;
+}
+
+.btn-danger:hover {
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+}
+
+/* === FEEDBACK === */
+.feedback {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  text-align: center;
+  min-height: 20px;
+}
+
+.feedback.error { color: #ff6b6b; }
+.feedback.success { color: #6c63ff; }
+
+/* === NAV === */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  border-bottom: 1px solid #222;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: #aaaaaa;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+.btn-logout {
+  background: none;
+  border: 1px solid #333;
+  color: #aaaaaa;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-logout:hover {
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+}
+
+/* === PAGE SECTION === */
+.page-section {
+  padding: 50px 60px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.page-header .btn {
+  width: auto;
+  padding: 12px 24px;
+}
+
+.page-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+.highlight { color: #6c63ff; }
+
+.subtitle {
+  color: #aaaaaa;
+  font-size: 1rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+
+/* === FORM OVERLAY === */
+.form-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  padding: 20px;
+}
+
+.form-overlay.active {
+  display: flex;
+}
+
+.form-overlay .form-box {
+  max-width: 520px;
+}
+
+/* === EVENTS GRID === */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+/* === EVENT CARD === */
+.event-card {
+  background-color: #111111;
+  border: 1px solid #222222;
+  border-radius: 12px;
+  padding: 28px;
+  transition: border-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.event-card:hover {
+  border-color: #6c63ff;
+}
+
+.event-card h3 {
+  font-size: 1.2rem;
+}
+
+.event-card p {
+  color: #aaaaaa;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.event-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 8px 0;
+}
+
+.event-meta span {
+  font-size: 0.85rem;
+  color: #888888;
+}
+
+.event-meta span strong {
+  color: #cccccc;
+}
+
+.capacity-bar {
+  background-color: #222222;
+  border-radius: 4px;
+  height: 6px;
+  overflow: hidden;
+  margin: 4px 0;
+}
+
+.capacity-fill {
+  height: 100%;
+  background-color: #6c63ff;
+  border-radius: 4px;
+  transition: width 0.3s;
+}
+
+.capacity-fill.full {
+  background-color: #ff6b6b;
+}
+
+.event-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* === EMPTY STATE === */
+.empty-state {
+  color: #aaaaaa;
+  text-align: center;
+  padding: 60px 0;
+  grid-column: 1 / -1;
+  font-size: 1rem;
+}
+
+/* === BADGE === */
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-confirmed {
+  background-color: #1a1a2e;
+  color: #6c63ff;
+  border: 1px solid #6c63ff;
+}
+
+.badge-full {
+  background-color: #2e1a1a;
+  color: #ff6b6b;
+  border: 1px solid #ff6b6b;
+}

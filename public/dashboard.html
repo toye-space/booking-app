@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <nav>
+      <div class="logo">EventBook</div>
+      <div class="nav-links">
+        <a href="/events.html">Events</a>
+        <a href="/dashboard.html">Dashboard</a>
+        <button class="btn-logout" onclick="logout()">Logout</button>
+      </div>
+    </nav>
+
+    <section class="page-section">
+      <h1>My <span class="highlight">Dashboard</span></h1>
+      <p class="subtitle" id="dashboard-subtitle"></p>
+
+      <!-- Host View -->
+      <div id="host-view" style="display:none">
+        <h2 class="section-title">My Events</h2>
+        <div class="events-grid" id="hosted-events"></div>
+      </div>
+
+      <!-- Guest View -->
+      <div id="guest-view" style="display:none">
+        <h2 class="section-title">My Bookings</h2>
+        <div class="events-grid" id="my-bookings"></div>
+      </div>
+
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
